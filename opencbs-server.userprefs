@@ -1,1 +1,31 @@
-﻿<Properties StartupItem="OPENCBS.Server.SelfHost\OPENCBS.Server.SelfHost.csproj" />
+﻿<Properties StartupItem="OPENCBS.Server.SelfHost\OPENCBS.Server.SelfHost.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OPENCBS.Server\Module\SessionModule.cs">
+    <Files>
+      <File FileName="OPENCBS.Server\MSSQLRepository\MSSQLUserRepository.cs" Line="1" Column="1" />
+      <File FileName="OPENCBS.Server\Module\SessionModule.cs" Line="1" Column="1" />
+      <File FileName="OPENCBS.Server\Module\UserModule.cs" Line="1" Column="1" />
+      <File FileName="OPENCBS.Server\Bootstrapper.cs" Line="25" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="OPENCBS.Server" expanded="True" selected="True">
+            <Node name="Interface" expanded="True">
+              <Node name="Repository" expanded="True" />
+            </Node>
+            <Node name="Module" expanded="True" />
+            <Node name="MSSQLRepository" expanded="True" />
+          </Node>
+          <Node name="OPENCBS.Server.SelfHost" expanded="True">
+            <Node name="Properties" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
