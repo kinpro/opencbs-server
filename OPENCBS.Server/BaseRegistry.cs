@@ -11,6 +11,7 @@ namespace OPENCBS.Server
                 scanner.WithDefaultConventions();
                 scanner.Assembly("OPENCBS.Server");
             });
+            For<ISessionProvider>().Singleton().Use<SessionProvider>();
         }
     }
 }
