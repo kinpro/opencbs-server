@@ -4,7 +4,7 @@ namespace OPENCBS.Server
 {
     public class Session
     {
-        public Guid Id;
-        public int UserId;
+        public Guid Id { get; set; }
+        public User User { get; set; }
     }
 }

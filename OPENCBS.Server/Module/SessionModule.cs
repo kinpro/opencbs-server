@@ -23,10 +23,14 @@ namespace OPENCBS.Server
                     throw new InvalidCredentialException();
                 }
 
-                var session = new Session { Id = Guid.NewGuid(), UserId = user.Id };
+                var session = new Session { Id = Guid.NewGuid(), User = user };
                 sessionProvider.Add(session);
 
-                return session;
+                return new
+                {
+                    Id = session.Id,
+                    UserId = session.User.Id
+                };
             };
         }
     }
