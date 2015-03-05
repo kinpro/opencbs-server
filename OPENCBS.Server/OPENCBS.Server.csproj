@@ -58,6 +58,8 @@
     <Compile Include="MSSQLRepository\MSSQLConnectionProvider.cs" />
     <Compile Include="MSSQLRepository\MSSQLUserRepository.cs" />
     <Compile Include="Module\SessionModule.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\ErrorResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
