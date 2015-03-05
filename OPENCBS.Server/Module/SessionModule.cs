@@ -1,4 +1,5 @@
-﻿using System.Security.Authentication;
+﻿using System;
+using System.Security.Authentication;
 using Nancy;
 using Nancy.ModelBinding;
 
@@ -6,7 +7,7 @@ namespace OPENCBS.Server
 {
     public class SessionModule : NancyModule
     {
-        public SessionModule() : base("/api/sessions")
+        public SessionModule(IUserRepository userRepository, ISessionProvider sessionProvider) : base("/api/sessions")
         {
             Post["/"] = x =>
             {
@@ -16,7 +17,16 @@ namespace OPENCBS.Server
                     throw new InvalidCredentialException();
                 }
 
-                return user;
+                user = userRepository.Get(user.UserName, user.Password);
+                if (user == null)
+                {
+                    throw new InvalidCredentialException();
+                }
+
+                var session = new Session { Id = Guid.NewGuid(), UserId = user.Id };
+                sessionProvider.Add(session);
+
+                return session;
             };
         }
     }

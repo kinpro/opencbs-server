@@ -60,6 +60,10 @@
     <Compile Include="Module\SessionModule.cs" />
     <Compile Include="Model\Error.cs" />
     <Compile Include="Model\ErrorResponse.cs" />
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="Interface\ISessionProvider.cs" />
+    <Compile Include="SessionProvider.cs" />
+    <Compile Include="BaseRegistry.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

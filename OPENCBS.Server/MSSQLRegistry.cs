@@ -1,13 +1,9 @@
-﻿using StructureMap.Configuration.DSL;
-
-namespace OPENCBS.Server
+﻿namespace OPENCBS.Server
 {
-	public class MSSQLRegistry : Registry
+	public class MSSQLRegistry : BaseRegistry
 	{
-		public MSSQLRegistry()
+        public MSSQLRegistry()
 		{
-			Scan(scanner => scanner.WithDefaultConventions());
-
 			For<IConnectionProvider>().Use<MSSQLConnectionProvider>();
 			For<IUserRepository>().Use<MSSQLUserRepository>();
 		}

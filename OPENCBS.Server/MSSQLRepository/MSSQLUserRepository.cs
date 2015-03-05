@@ -41,8 +41,8 @@ namespace OPENCBS.Server
                 from
                     dbo.Users
                 where
-                    username = @username
-                    and password = @password
+                    user_name = @username
+                    and user_pass = @password
             ";
             using (var connection = _connectionProvider.GetConnection())
             {
